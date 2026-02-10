@@ -39,7 +39,7 @@ def registerUser(userList):
         },
         'contas': {'conta': 0,
                    'banco': '0001',
-                   'proprietario': user['cpf'],
+                   'proprietario': 'cpf',
                    'saldo': 0,
                    'extrato': [],
                    'qtdOut': 0
@@ -48,7 +48,7 @@ def registerUser(userList):
     for usuario in userList:
         if usuario['cpf'] == user['cpf']:
             print('ERRO!!')
-            print(f'Usuário com CPF({user['cpf']}) já existe no sistema!')
+            print(f"Usuário com CPF({user['cpf']}) já existe no sistema!")
             main()
         userList.append(user)
         print('Registrado com sucesso!')
